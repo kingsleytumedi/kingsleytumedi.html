@@ -32,29 +32,46 @@ nav a {
   font-weight: bold;
 }
 
-.hero {
-  background-color: #dbe9ff;
+/* Full-screen hero section */
+.hero-full {
+  background-image: url('https://i.postimg.cc/7YHT7hLg/homepage-wallpaper.jpg'); /* Your image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   text-align: center;
-  padding: 50px 20px;
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: 36px;
+/* Dark overlay for text */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
 }
 
-.hero p {
-  font-size: 18px;
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.hero .btn {
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-overlay .btn {
   display: inline-block;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #0073e6;
   color: white;
-  border-radius: 5px;
   text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .featured {
