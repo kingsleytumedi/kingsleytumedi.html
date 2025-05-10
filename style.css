@@ -34,7 +34,7 @@ nav a {
 
 /* Full-screen hero section */
 .hero-full {
-  background-image: url('https://i.postimg.cc/8kdvtg1D/pexels-alinaskazka-15096083.jpg');
+  background-image: url('https://i.postimg.cc/sgKxh39H/hom-screen.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -139,7 +139,7 @@ footer {
 
 /* ✅ ADDED: Background images for dog and cat banners */
 .page-banner.dog-banner {
-  background-image: url('https://i.postimg.cc/B6qsjX6H/dog-banner.jpg');
+  background-image: url('https://i.postimg.cc/qR6vSyfW/dog-background2.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -147,7 +147,7 @@ footer {
 }
 
 .page-banner.cat-banner {
-  background-image: url('https://i.postimg.cc/7Y2RcjRQ/cat-banner.jpg');
+  background-image: url('https://i.postimg.cc/0y52xLRY/cat-background.jpg');
   background-size: cover;
   background-position: center;
   color: white;
