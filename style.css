@@ -137,3 +137,37 @@ footer {
   margin-top: 40px;
 }
 
+/* ✅ ADDED: Background images for dog and cat banners */
+.page-banner.dog-banner {
+  background-image: url('https://i.postimg.cc/B6qsjX6H/dog-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.page-banner.cat-banner {
+  background-image: url('https://i.postimg.cc/7Y2RcjRQ/cat-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.page-banner.dog-banner::before,
+.page-banner.cat-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
+
+.page-banner.dog-banner h1,
+.page-banner.dog-banner p,
+.page-banner.cat-banner h1,
+.page-banner.cat-banner p {
+  position: relative;
+  z-index: 1;
+}
+
