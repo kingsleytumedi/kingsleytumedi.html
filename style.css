@@ -213,4 +213,46 @@ footer {
     align-items: center;
   }
 }
+.cart {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cart h1 {
+  margin-bottom: 30px;
+}
+
+.cart table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart th,
+.cart td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.cart th {
+  background-color: #004080;
+  color: white;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.checkout-btn .btn {
+  padding: 12px 30px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
