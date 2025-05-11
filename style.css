@@ -259,3 +259,56 @@ footer {
   border-radius: 5px;
   font-weight: bold;
 }
+/* ===== Feedback Page Styling ===== */
+
+main h2 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Form elements */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #002a5e;
+}
