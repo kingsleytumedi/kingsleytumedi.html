@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Shopping Cart - Tumedi's Pet Store</title>
   <link rel="stylesheet" href="style.css">
+  <script src="cart.js" defer></script>
 </head>
 <body>
   <header>
@@ -30,26 +31,16 @@
           <th>Quantity</th>
           <th>Price (P)</th>
           <th>Total (P)</th>
+          <th>Action</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Premium Dog Food</td>
-          <td>2</td>
-          <td>70.00</td>
-          <td>140.00</td>
-        </tr>
-        <tr>
-          <td>Interactive Cat Toy</td>
-          <td>1</td>
-          <td>45.00</td>
-          <td>45.00</td>
-        </tr>
+      <tbody id="cart-items">
+        <!-- JavaScript will inject items here -->
       </tbody>
     </table>
 
     <div class="cart-total">
-      <strong>Total: P185.00</strong>
+      <strong>Total: P<span id="cart-total">0.00</span></strong>
     </div>
 
     <div class="checkout-btn">
