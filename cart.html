@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - Tumedi's Pet Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .cart-item {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+    }
+
+    .cart-item p {
+      margin: 5px 0;
+    }
+
+    .total {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tumedi's Pet Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dog.html">Dogs</a>
+      <a href="cat.html">Cats</a>
+      <a href="about.html">About</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Cart 🛒</h2>
+
+    <div class="cart-item" data-price="150">
+      <p><strong>Product:</strong> Premium Dog Food</p>
+      <p><strong>Price:</strong> P150.00</p>
+      <label><strong>Quantity:</strong> 
+        <input type="number" value="2" min="1" class="qty-input">
+      </label>
+    </div>
+
+    <div class="cart-item" data-price="35">
+      <p><strong>Product:</strong> Cat Toy Mouse</p>
+      <p><strong>Price:</strong> P35.00</p>
+      <label><strong>Quantity:</strong> 
+        <input type="number" value="1" min="1" class="qty-input">
+      </label>
+    </div>
+
+    <p class="total">Total: <span id="cart-total">P335.00</span></p>
+
+    <button>Proceed to Checkout</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tumedi's Pet Store</p>
+  </footer>
+
+  <script>
+    function updateTotal() {
+      const items = document.querySelectorAll('.cart-item');
+      let total = 0;
+      items.forEach(item => {
+        const price = parseFloat(item.getAttribute('data-price'));
+        const qty = parseInt(item.querySelector('.qty-input').value);
+        total += price * qty;
+      });
+      document.getElementById('cart-total').innerText = `P${total.toFixed(2)}`;
+    }
+
+    document.querySelectorAll('.qty-input').forEach(input => {
+      input.addEventListener('change', updateTotal);
+    });
+
+    // Initial total calculation
+    updateTotal();
+  </script>
+
+</body>
+</html>
 
