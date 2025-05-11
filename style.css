@@ -72,6 +72,11 @@ nav a {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.hero-overlay .btn:hover {
+  background-color: #0059b3;
 }
 
 .featured {
@@ -94,6 +99,11 @@ nav a {
   width: 200px;
   padding: 10px;
   text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card img {
@@ -110,6 +120,11 @@ nav a {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #002c5f;
 }
 
 /* ✅ New: Banner style for Dogs page (and other pages) */
@@ -117,16 +132,19 @@ nav a {
   background-color: #eaf4ff;
   text-align: center;
   padding: 60px 20px;
+  position: relative;
 }
 
 .page-banner h1 {
   font-size: 36px;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .page-banner p {
   font-size: 18px;
   color: #333;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 footer {
@@ -169,5 +187,30 @@ footer {
 .page-banner.cat-banner p {
   position: relative;
   z-index: 1;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ✅ Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .page-banner h1 {
+    font-size: 28px;
+  }
+
+  .page-banner p {
+    font-size: 16px;
+  }
+
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
