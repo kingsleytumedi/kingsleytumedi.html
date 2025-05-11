@@ -50,7 +50,13 @@
   <footer>
     <p>&copy; 2025 Tumedi's Pet Store</p>
   </footer>
-
+<script>
+    function showSuccessMessage(event) {
+      event.preventDefault(); // prevent actual form submission
+      alert("✅ Successfully sent!\nThank you for your feedback.");
+      document.querySelector("form").reset(); // optional: reset form
+    }
+  </script>
 </body>
 </html>
 
