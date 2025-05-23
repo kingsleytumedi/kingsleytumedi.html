@@ -1,9 +1,22 @@
+/* ===== Base Styles ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* Main content container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
 header {
   background-color: #004080;
   color: white;
@@ -32,7 +45,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Full-screen hero section */
+/* ===== Hero Section ===== */
 .hero-full {
   background-image: url('https://i.postimg.cc/sgKxh39H/hom-screen.jpg');
   background-size: cover;
@@ -45,12 +58,13 @@ nav a {
   text-align: center;
 }
 
-/* Overlay styling for homepage */
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 40px;
   border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero-overlay h1 {
@@ -79,21 +93,28 @@ nav a {
   background-color: #0059b3;
 }
 
+/* ===== Featured Sections ===== */
 .featured {
-  padding: 40px 20px;
+  padding: 40px 0;
   text-align: center;
 }
 
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ===== Products Grid ===== */
 .products {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  gap: 20px;
+  padding: 40px 0;
 }
 
 .card {
-  background: #004080; /* Updated to match header */
+  background: #004080;
   color: white;
   border: none;
   border-radius: 8px;
@@ -130,57 +151,49 @@ nav a {
   background-color: #0059b3;
 }
 
-/* ✅ New: Banner style for Dogs page (and other pages) */
+/* ===== Page Banners ===== */
 .page-banner {
-  background-color: #eaf4ff;
   text-align: center;
   padding: 60px 20px;
   position: relative;
+  width: 100%;
 }
 
 .page-banner h1 {
   font-size: 36px;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .page-banner p {
   font-size: 18px;
   color: #333;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #004080;
-  color: white;
-  margin-top: 40px;
-}
-
-/* ✅ ADDED: Background images for dog and cat banners */
-.page-banner.dog-banner {
-  background-image: url('https://i.postimg.cc/qR6vSyfW/dog-background2.jpg');
+/* Special banner styles */
+.page-banner.dog-banner,
+.page-banner.cat-banner {
   background-size: cover;
   background-position: center;
   color: white;
-  position: relative;
+}
+
+.page-banner.dog-banner {
+  background-image: url('https://i.postimg.cc/qR6vSyfW/dog-background2.jpg');
 }
 
 .page-banner.cat-banner {
   background-image: url('https://i.postimg.cc/SRf4CbTV/Soft-Cat-Blanket.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  position: relative;
 }
 
 .page-banner.dog-banner::before,
 .page-banner.cat-banner::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -190,10 +203,110 @@ footer {
 .page-banner.cat-banner p {
   position: relative;
   z-index: 1;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* ✅ Responsive tweaks for smaller screens */
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #004080;
+  color: white;
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* ===== Cart Page ===== */
+.cart {
+  padding: 40px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cart h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cart table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart th,
+.cart td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.cart th {
+  background-color: #004080;
+  color: white;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.checkout-btn {
+  text-align: center;
+}
+
+.checkout-btn .btn {
+  padding: 12px 30px;
+  background-color: #0073e6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* ===== Feedback Form ===== */
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #002a5e;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   .hero-overlay h1 {
     font-size: 2rem;
@@ -215,100 +328,9 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.cart {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.cart h1 {
-  margin-bottom: 30px;
-}
-
-.cart table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.cart th,
-.cart td {
-  border: 1px solid #ccc;
-  padding: 12px;
-}
-
-.cart th {
-  background-color: #004080;
-  color: white;
-}
-
-.cart-total {
-  text-align: right;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.checkout-btn .btn {
-  padding: 12px 30px;
-  background-color: #0073e6;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-/* ===== Feedback Page Styling ===== */
-
-main h2 {
-  color: #004080;
-  margin-bottom: 10px;
-}
-
-main p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-}
-
-/* Form elements */
-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin: auto;
-}
-
-form label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-form button {
-  background-color: #004080;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #002a5e;
+  
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
