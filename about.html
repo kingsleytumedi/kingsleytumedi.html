@@ -2,51 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Tumedi's Pet Store</title>
   <!-- Bootstrap 5 CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="index.html">🐾 Tumedi's Pet Store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="dogs.html">Dogs</a></li>
+              <li class="nav-item"><a class="nav-link" href="cats.html">Cats</a></li>
+              <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+              <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-  <header>
-    <h1>Tumedi's Pet Store</h1>
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="dogs.html">Dogs</a></li>
-    <li><a href="cats.html">Cats</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-    <li><a href="cart.html">Cart</a></li>
-  </ul>
-</nav>
+    <!-- Main Content -->
+    <main class="about-page py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="page-title text-center mb-5">About Our Pet Store</h1>
+            
+            <section class="about-section mb-5">
+              <p class="lead">At Tumedi's Pet Store, we offer a full range of pet supplies for you and your pets – from top brands to affordable pet products. Our goal is to make your life easier with simple online ordering and convenient home delivery.</p>
+            </section>
 
-  </header>
+            <div class="accordion" id="aboutAccordion">
+              <!-- Mission -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mission">
+                    <i class="fas fa-bullseye me-2"></i> Our Mission
+                  </button>
+                </h2>
+                <div id="mission" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body">
+                    <p>With years of experience, we bring the best for your pets. You can expect top-notch products, customer reviews, and product descriptions to help you make informed decisions on pet food, accessories, and more.</p>
+                  </div>
+                </div>
+              </div>
 
- <main>
-  <h2>About Us</h2>
-  <p>At Tumedi's Pet Store, we offer a full range of pet supplies for you and your pets – from top brands to affordable pet products. Our goal is to make your life easier with simple online ordering and convenient home delivery. We pride ourselves on quality and great customer service.</p>
+              <!-- Story -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#story">
+                    <i class="fas fa-history me-2"></i> Our Story
+                  </button>
+                </h2>
+                <div id="story" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body">
+                    <p>Founded in 2025, Tumedi's Pet Store started with a passion for pets and the goal to bring high-quality pet products to Botswana. From food to accessories, we've got it all for your beloved pets!</p>
+                  </div>
+                </div>
+              </div>
 
-  <h3>Our Mission</h3>
-  <p>With years of experience, we bring the best for your pets. You can expect top-notch products, customer reviews, and product descriptions to help you make informed decisions on pet food, accessories, and more.</p>
+              <!-- Reputation -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#reputation">
+                    <i class="fas fa-star me-2"></i> Our Reputation
+                  </button>
+                </h2>
+                <div id="reputation" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body">
+                    <p>We've been making pets and their owners happy since 2025. We're proud to offer the best pet supplies with secure, fast delivery across Botswana and beyond.</p>
+                  </div>
+                </div>
+              </div>
 
-  <h3>Our Story</h3>
-  <p>Founded in 2025, Tumedi's Pet Store started with a passion for pets and the goal to bring high-quality pet products to Botswana. From food to accessories, we’ve got it all for your beloved pets!</p>
+              <!-- Security -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#security">
+                    <i class="fas fa-lock me-2"></i> Safe Shopping
+                  </button>
+                </h2>
+                <div id="security" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body">
+                    <p>We take the privacy and security of your information seriously. All transactions are protected with 128-Bit SSL encryption, ensuring that your personal and payment information is safe with us.</p>
+                  </div>
+                </div>
+              </div>
 
-  <h3>A Reputation You Can Trust</h3>
-  <p>We've been making pets and their owners happy since 2025. We’re proud to offer the best pet supplies with secure, fast delivery across Botswana and beyond.</p>
+              <!-- Service -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service">
+                    <i class="fas fa-headset me-2"></i> Customer Service
+                  </button>
+                </h2>
+                <div id="service" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+                  <div class="accordion-body">
+                    <p>We work hard to make sure your order arrives on time and in perfect condition. Our customer service team is always happy to help if you have any questions or concerns.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <h3>Safe and Secure Shopping</h3>
-  <p>We take the privacy and security of your information seriously. All transactions are protected with 128-Bit SSL encryption, ensuring that your personal and payment information is safe with us.</p>
+            <!-- Contact Section -->
+            <section class="contact-section mt-5 p-4 bg-light rounded">
+              <h2 class="text-center mb-4"><i class="fas fa-envelope me-2"></i>Contact Us</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <p><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@tumedispetstore.com">contact@tumedispetstore.com</a></p>
+                  <p><i class="fas fa-phone me-2"></i> <a href="tel:+26712345678">+267 123 456 78</a></p>
+                </div>
+                <div class="col-md-6">
+                  <p><i class="fas fa-map-marker-alt me-2"></i> Tumedi's Pet Store</p>
+                  <p><i class="fas fa-city me-2"></i> Gaborone, Botswana</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div> <!-- End content-wrapper -->
 
-  <h3>Service that Works for You</h3>
-  <p>We work hard to make sure your order arrives on time and in perfect condition. Our customer service team is always happy to help if you have any questions or concerns.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container text-center py-4">
+      <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://wa.me/74602567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp mx-2"></i></a>
+        <a href="https://facebook.com/TumedisPetStore" target="_blank" aria-label="Facebook"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://instagram.com/TumedisPetStore" target="_blank" aria-label="Instagram"><i class="fab fa-instagram mx-2"></i></a>
+      </div>
+    </div>
+  </footer>
 
-  <h3>Contact Us</h3>
-  <p>If you have any questions or need help, don't hesitate to reach out to us! We're here to assist you with all your pet needs.</p>
-  <p>Email: <a href="mailto:contact us at tumedi'spetstore@gmail.com">contact@ tumedi'spetstore@gmail.com</a></p>
-  <p>Phone: <a href="tel:+26712345678">+267 123 456 78</a></p>
-  <p>Visit our center: Tumedi's Pet Store, Gaborone, Botswana</p>
-</main>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
