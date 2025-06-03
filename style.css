@@ -1,107 +1,209 @@
-/* ========== Navigation ========== */
-.navbar-nav .nav-item:first-child .nav-link {
-  color: #0d6efd !important; /* Blue for Home */
-  font-weight: 600;
-}
-
-.navbar-nav .nav-item:first-child .nav-link:hover {
-  color: #084298 !important; /* Darker blue on hover */
-}
-
-/* Other nav links default */
-.navbar-nav .nav-link {
+/* Reset and base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
   color: #333;
-  transition: color 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #0d6efd;
+a {
+  text-decoration: none;
+  color: #005eb8;
 }
 
-/* ========== Floating Cart Button ========== */
+a:hover {
+  color: #003d80;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #005eb8 !important;
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: #cce5ff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #cce5ff !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  background-color: #003d80 !important;
+  color: #fff !important;
+}
+
+/* Floating Cart Button */
 .cart-btn {
+  background-color: #007bff !important;
   width: 50px;
   height: 50px;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 1050; /* Above navbar */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+  background-color: #0056b3 !important;
+}
+
+.cart-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero-full {
+  background: url('https://i.postimg.cc/k4j4NtzS/pet-hero-bg.jpg') no-repeat center center/cover;
+  height: 400px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cart-count {
-  font-size: 0.75rem;
-  padding: 0.25em 0.5em;
-}
-
-/* ========== Hero Section ========== */
-.hero-full {
-  background: url('https://i.postimg.cc/XYqCDWSw/pets-hero.jpg') no-repeat center center/cover;
-  height: 70vh;
-  position: relative;
-  margin-bottom: 40px;
-}
-
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 94, 184, 0.8);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 700px;
 }
 
-/* ========== Product Cards ========== */
+.hero-overlay h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-overlay .btn {
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #1e7e34;
+}
+
+/* Featured Products */
+.container h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #005eb8;
+}
+
 .card {
   border: none;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem 1rem;
 }
 
 .card-title {
-  font-size: 1.25rem;
   font-weight: 700;
+  font-size: 1.25rem;
+  color: #005eb8;
 }
 
 .card-text {
   font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
-/* Add to Cart Button */
-.add-to-cart {
-  background-color: #0d6efd;
+.btn.add-to-cart {
+  background-color: #005eb8;
   border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
-.add-to-cart:hover {
-  background-color: #084298;
+.btn.add-to-cart:hover {
+  background-color: #003d80;
 }
 
-/* ========== Footer ========== */
+/* Footer */
 footer {
+  background-color: #003d80;
+  color: #cce5ff;
+  padding: 2rem 1rem;
+  text-align: center;
   font-size: 0.9rem;
 }
 
+footer p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
 .social-icons a {
-  color: #fff;
+  color: #cce5ff;
   font-size: 1.5rem;
+  margin: 0 0.75rem;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #0d6efd;
+  color: #fff;
 }
 
-/* ========== Responsive Adjustments ========== */
-@media (max-width: 768px) {
-  .hero-full {
-    height: 50vh;
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
   }
-  .cart-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .card-img-top {
+    height: 180px;
   }
 }
