@@ -226,14 +226,24 @@ nav a:hover {
   background-color: #0059b3;
 }
 
-/* ===== Footer ===== */
-footer {
-  background-color: #004080;
+
+/* Footer */
+.footer {
+  background-color: #0056A3;
   color: white;
-  padding: 30px 0;
+  padding: 20px;
   text-align: center;
-  margin-top: auto;
 }
+
+.footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #FFD700;
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
