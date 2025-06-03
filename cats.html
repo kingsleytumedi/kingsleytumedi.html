@@ -2,225 +2,427 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Products - Tumedi's Pet Store</title>
   <!-- Bootstrap 5 CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">🐾 Tumedi's Pet Store</div>
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="dogs.html">Dogs</a></li>
-    <li><a href="cats.html">Cats</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-    <li><a href="cart.html">Cart</a></li>
-  </ul>
-</nav>
-
+  <header class="bg-primary text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo fs-3 fw-bold">🐾 Tumedi's Pet Store</div>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="dogs.html">Dogs</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="cats.html">Cats</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="page-banner">
-    <h1>Cat Products</h1>
-    <p>Treats, toys and more for your purring friends 🐱</p>
-  </section>
-
-  <section class="products">
-    <div class="card">
-      <img src="https://i.postimg.cc/MGPskNrL/cat-toy.jpg" alt="Cat Toy">
-      <h3>Interactive Cat Toy</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/W4F7WY3V/Wholesome-Cat-Food.jpg" alt="Cat Food">
-      <h3>Wholesome Cat Food</h3>
-      <p>P60.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/HnH4LptW/Soft-Cat-Bed.jpg" alt="Cat Bed">
-      <h3>Soft Cat Bed</h3>
-      <p>P80.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/NFgmcdg5/Cat-Scratcher-Post.jpg" alt="Cat Scratcher">
-      <h3>Cat Scratcher Post</h3>
-      <p>P120.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/fR3XDthj/Stylish-Cat-Collar.jpg" alt="Cat Collar">
-      <h3>Stylish Cat Collar</h3>
-      <p>P35.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/hjn7L2Qp/Elegant-Cat-Bowl.jpg" alt="Cat Bowl">
-      <h3>Elegant Cat Bowl</h3>
-      <p>P50.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/BbQLytgF/Cat-Claw-Care-Kit.jpg" alt="Cat Claw Care">
-      <h3>Cat Claw Care Kit</h3>
-      <p>P65.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/RhDFDdqr/Gentle-Cat-Shampoo.jpg" alt="Cat Shampoo">
-      <h3>Gentle Cat Shampoo</h3>
-      <p>P40.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/3JzNjtPm/Comfortable-Cat-Harness.jpg" alt="Cat Harness">
-      <h3>Comfortable Cat Harness</h3>
-      <p>P75.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/GmkLFdPn/Delicious-Cat-Treats.jpg" alt="Cat Treats">
-      <h3>Delicious Cat Treats</h3>
-      <p>P25.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/1zs9M2Mn/Premium-Cat-Food.jpg" alt="Cat Food Bag">
-      <h3>Premium Cat Food</h3>
-      <p>P90.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/MTGzJBCz/Cozy-Cat-Pillow.jpg" alt="Cat Pillow">
-      <h3>Cozy Cat Pillow</h3>
-      <p>P55.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/3NshGcdw/Scratching-Mat.jpg" alt="Cat Scratching Mat">
-      <h3>Scratching Mat</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/3xChy97K/Cat-Climbing-Tower.jpg" alt="Cat Climbing Tower">
-      <h3>Cat Climbing Tower</h3>
-      <p>P200.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/hjwRF580/Soft-Cat-Blanket.jpg" alt="Cat Blanket">
-      <h3>Soft Cat Blanket</h3>
-      <p>P60.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/5yCdfSnW/cat-water-fountain.jpg" alt="Cat Water Fountain">
-      <h3>Cat Water Fountain</h3>
-      <p>P120.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/nMf8r9Pj/Automatic-Cat-Food-Dispenser.jpg" alt="Cat Food Dispensers">
-      <h3>Automatic Cat Food Dispenser</h3>
-      <p>P150.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/8PLcHRDY/Cat-Playmat.jpg" alt="Cat Playmat">
-      <h3>Cat Playmat</h3>
-      <p>P50.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/QdbtLjFk/Cat-Toy-Mouse.jpg" alt="Cat Toy Mouse">
-      <h3>Cat Toy Mouse</h3>
-      <p>P30.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/pdcLTkYm/Cat-Safety-Vest.jpg" alt="Cat Vest">
-      <h3>Cat Safety Vest</h3>
-      <p>P70.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/4NRNmYtQ/Cat-Umbrella.jpg" alt="Cat Umbrella">
-      <h3>Cat Umbrella</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/QMzjsCh5/Cat-Shedding-Gloves.jpg" alt="Cat Shedding Gloves">
-      <h3>Cat Shedding Gloves</h3>
-      <p>P55.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/tJ3bhzPt/Cat-Basket.jpg" alt="Cat Basket">
-      <h3>Cat Basket</h3>
-      <p>P80.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/YSTBZPzz/cat-paw-cushion.jpg" alt="Cat Paw Cushion">
-      <h3>Cat Paw Cushion</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/7hnvCZ8K/Cat-Hoodie.jpg" alt="Cat Hoodie">
-      <h3>Cat Hoodie</h3>
-      <p>P120.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/G3Fngq8v/Cat-Laser-Toy.jpg" alt="Cat Laser Toy">
-      <h3>Cat Laser Toy</h3>
-      <p>P35.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/W1fBqyCc/Cat-Visor-Hat.jpg" alt="Cat Visor Hat">
-      <h3>Cat Visor Hat</h3>
-      <p>P60.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/8C2xt6Ty/Cat-Sling-Bag.jpg" alt="Cat Sling Bag">
-      <h3>Cat Sling Bag</h3>
-      <p>P90.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/sxyqRCQ7/Cat-Sunshade.jpg" alt="Cat Sunshade">
-      <h3>Cat Sunshade</h3>
-      <p>P50.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/qMJSb0dd/Cat-Dog-Leash.jpg" alt="Cat Dog Leash">
-      <h3>Cat Dog Leash</h3>
-      <p>P75.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/NjLVt4MJ/Cat-Pet-Carrier.jpg" alt="Cat Pet Carrier">
-      <h3>Cat Pet Carrier</h3>
-      <p>P150.00</p>
-      <button>Add to Cart</button>
+  <section class="page-banner bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="display-4">Cat Products</h1>
+      <p class="lead">Treats, toys and more for your purring friends 🐱</p>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+  <section class="products py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+        <!-- Product 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/MGPskNrL/cat-toy.jpg" class="card-img-top" alt="Interactive Cat Toy">
+            <div class="card-body">
+              <h3 class="card-title h5">Interactive Cat Toy</h3>
+              <p class="card-text text-success fw-bold">P45.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/W4F7WY3V/Wholesome-Cat-Food.jpg" class="card-img-top" alt="Wholesome Cat Food">
+            <div class="card-body">
+              <h3 class="card-title h5">Wholesome Cat Food</h3>
+              <p class="card-text text-success fw-bold">P60.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/HnH4LptW/Soft-Cat-Bed.jpg" class="card-img-top" alt="Soft Cat Bed">
+            <div class="card-body">
+              <h3 class="card-title h5">Soft Cat Bed</h3>
+              <p class="card-text text-success fw-bold">P80.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/NFgmcdg5/Cat-Scratcher-Post.jpg" class="card-img-top" alt="Cat Scratcher Post">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Scratcher Post</h3>
+              <p class="card-text text-success fw-bold">P120.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/fR3XDthj/Stylish-Cat-Collar.jpg" class="card-img-top" alt="Stylish Cat Collar">
+            <div class="card-body">
+              <h3 class="card-title h5">Stylish Cat Collar</h3>
+              <p class="card-text text-success fw-bold">P35.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/hjn7L2Qp/Elegant-Cat-Bowl.jpg" class="card-img-top" alt="Elegant Cat Bowl">
+            <div class="card-body">
+              <h3 class="card-title h5">Elegant Cat Bowl</h3>
+              <p class="card-text text-success fw-bold">P50.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 7 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/BbQLytgF/Cat-Claw-Care-Kit.jpg" class="card-img-top" alt="Cat Claw Care Kit">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Claw Care Kit</h3>
+              <p class="card-text text-success fw-bold">P65.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 8 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/RhDFDdqr/Gentle-Cat-Shampoo.jpg" class="card-img-top" alt="Gentle Cat Shampoo">
+            <div class="card-body">
+              <h3 class="card-title h5">Gentle Cat Shampoo</h3>
+              <p class="card-text text-success fw-bold">P40.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 9 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/3JzNjtPm/Comfortable-Cat-Harness.jpg" class="card-img-top" alt="Comfortable Cat Harness">
+            <div class="card-body">
+              <h3 class="card-title h5">Comfortable Cat Harness</h3>
+              <p class="card-text text-success fw-bold">P75.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 10 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/GmkLFdPn/Delicious-Cat-Treats.jpg" class="card-img-top" alt="Delicious Cat Treats">
+            <div class="card-body">
+              <h3 class="card-title h5">Delicious Cat Treats</h3>
+              <p class="card-text text-success fw-bold">P25.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 11 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/1zs9M2Mn/Premium-Cat-Food.jpg" class="card-img-top" alt="Premium Cat Food">
+            <div class="card-body">
+              <h3 class="card-title h5">Premium Cat Food</h3>
+              <p class="card-text text-success fw-bold">P90.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 12 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/MTGzJBCz/Cozy-Cat-Pillow.jpg" class="card-img-top" alt="Cozy Cat Pillow">
+            <div class="card-body">
+              <h3 class="card-title h5">Cozy Cat Pillow</h3>
+              <p class="card-text text-success fw-bold">P55.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 13 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/3NshGcdw/Scratching-Mat.jpg" class="card-img-top" alt="Scratching Mat">
+            <div class="card-body">
+              <h3 class="card-title h5">Scratching Mat</h3>
+              <p class="card-text text-success fw-bold">P45.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 14 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/3xChy97K/Cat-Climbing-Tower.jpg" class="card-img-top" alt="Cat Climbing Tower">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Climbing Tower</h3>
+              <p class="card-text text-success fw-bold">P200.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 15 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/hjwRF580/Soft-Cat-Blanket.jpg" class="card-img-top" alt="Soft Cat Blanket">
+            <div class="card-body">
+              <h3 class="card-title h5">Soft Cat Blanket</h3>
+              <p class="card-text text-success fw-bold">P60.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 16 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/5yCdfSnW/cat-water-fountain.jpg" class="card-img-top" alt="Cat Water Fountain">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Water Fountain</h3>
+              <p class="card-text text-success fw-bold">P120.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 17 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/nMf8r9Pj/Automatic-Cat-Food-Dispenser.jpg" class="card-img-top" alt="Automatic Cat Food Dispenser">
+            <div class="card-body">
+              <h3 class="card-title h5">Automatic Cat Food Dispenser</h3>
+              <p class="card-text text-success fw-bold">P150.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 18 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/8PLcHRDY/Cat-Playmat.jpg" class="card-img-top" alt="Cat Playmat">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Playmat</h3>
+              <p class="card-text text-success fw-bold">P50.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 19 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/QdbtLjFk/Cat-Toy-Mouse.jpg" class="card-img-top" alt="Cat Toy Mouse">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Toy Mouse</h3>
+              <p class="card-text text-success fw-bold">P30.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 20 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/pdcLTkYm/Cat-Safety-Vest.jpg" class="card-img-top" alt="Cat Safety Vest">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Safety Vest</h3>
+              <p class="card-text text-success fw-bold">P70.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 21 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/4NRNmYtQ/Cat-Umbrella.jpg" class="card-img-top" alt="Cat Umbrella">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Umbrella</h3>
+              <p class="card-text text-success fw-bold">P45.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 22 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/QMzjsCh5/Cat-Shedding-Gloves.jpg" class="card-img-top" alt="Cat Shedding Gloves">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Shedding Gloves</h3>
+              <p class="card-text text-success fw-bold">P55.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 23 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/tJ3bhzPt/Cat-Basket.jpg" class="card-img-top" alt="Cat Basket">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Basket</h3>
+              <p class="card-text text-success fw-bold">P80.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 24 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/YSTBZPzz/cat-paw-cushion.jpg" class="card-img-top" alt="Cat Paw Cushion">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Paw Cushion</h3>
+              <p class="card-text text-success fw-bold">P45.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 25 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/7hnvCZ8K/Cat-Hoodie.jpg" class="card-img-top" alt="Cat Hoodie">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Hoodie</h3>
+              <p class="card-text text-success fw-bold">P120.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 26 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/G3Fngq8v/Cat-Laser-Toy.jpg" class="card-img-top" alt="Cat Laser Toy">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Laser Toy</h3>
+              <p class="card-text text-success fw-bold">P35.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 27 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/W1fBqyCc/Cat-Visor-Hat.jpg" class="card-img-top" alt="Cat Visor Hat">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Visor Hat</h3>
+              <p class="card-text text-success fw-bold">P60.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 28 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/8C2xt6Ty/Cat-Sling-Bag.jpg" class="card-img-top" alt="Cat Sling Bag">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Sling Bag</h3>
+              <p class="card-text text-success fw-bold">P90.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 29 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/sxyqRCQ7/Cat-Sunshade.jpg" class="card-img-top" alt="Cat Sunshade">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Sunshade</h3>
+              <p class="card-text text-success fw-bold">P50.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 30 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/qMJSb0dd/Cat-Dog-Leash.jpg" class="card-img-top" alt="Cat Dog Leash">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Dog Leash</h3>
+              <p class="card-text text-success fw-bold">P75.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product 31 -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/NjLVt4MJ/Cat-Pet-Carrier.jpg" class="card-img-top" alt="Cat Pet Carrier">
+            <div class="card-body">
+              <h3 class="card-title h5">Cat Pet Carrier</h3>
+              <p class="card-text text-success fw-bold">P150.00</p>
+              <button class="btn btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/74602567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp mx-2"></i></a>
+        <a href="https://facebook.com/TumedisPetStore" target="_blank" aria-label="Facebook"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://instagram.com/TumedisPetStore" target="_blank" aria-label="Instagram"><i class="fab fa-instagram mx-2"></i></a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
