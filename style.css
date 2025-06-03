@@ -25,18 +25,23 @@ body {
   min-height: 100vh;
 }
 
+img, .card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 
 /* ===== Header & Navigation ===== */
 .site-header {
   background-color: var(--dark-blue);
   color: var(--text-light);
-  padding: 15px 0;
+  padding: 1rem 0;
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
@@ -50,7 +55,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .navbar-brand:hover {
@@ -59,16 +64,17 @@ body {
 
 .navbar-nav {
   display: flex;
-  gap: 15px;
+  gap: 1rem;
 }
 
 .nav-link {
   color: var(--text-light);
   font-weight: 500;
-  padding: 8px 15px;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   font-size: 1.1rem;
+  text-decoration: none;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -80,6 +86,27 @@ body {
   border: none;
   font-size: 1.5rem;
   color: var(--text-light);
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* ===== Responsive Navbar ===== */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-nav.show {
+    display: flex;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
 }
 
 /* ===== Hero Sections ===== */
@@ -97,7 +124,7 @@ body {
 .hero-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 40px;
+  padding: 2rem;
   border-radius: 10px;
   max-width: 800px;
   text-align: center;
@@ -105,23 +132,52 @@ body {
 
 .hero-overlay h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .hero-overlay p {
   font-size: 1.2rem;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 }
 
+/* ===== Responsive Hero ===== */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-overlay {
+    padding: 1rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===== Page Banner ===== */
 .page-banner {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background-color: var(--dark-blue);
   color: var(--text-light);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .page-banner h1 {
   font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-banner h1 {
+    font-size: 2rem;
+  }
 }
 
 /* ===== Product Cards ===== */
@@ -141,12 +197,6 @@ body {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-  width: 100%;
 }
 
 .card-body {
@@ -183,13 +233,7 @@ body {
 
 .btn-primary:hover {
   background-color: var(--hover-blue);
-  color: var(--text-light);
   transform: translateY(-2px);
-}
-
-.btn-lg {
-  padding: 0.8rem 1.75rem;
-  font-size: 1.1rem;
 }
 
 /* ===== Forms ===== */
@@ -278,6 +322,24 @@ body {
   padding-top: 1rem;
 }
 
+/* ===== Responsive Cart ===== */
+@media (max-width: 576px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .cart-summary {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
 /* ===== About Page ===== */
 .about-page {
   padding: 3rem 0;
@@ -292,6 +354,7 @@ body {
   margin-bottom: 2rem;
   position: relative;
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 .page-title:after {
@@ -337,6 +400,7 @@ body {
   color: var(--text-light);
   padding: 2rem 0;
   margin-top: auto;
+  text-align: center;
 }
 
 .social-links a {
@@ -366,8 +430,8 @@ body {
 /* ===== Floating Cart Button ===== */
 .floating-cart {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -392,75 +456,4 @@ body {
   justify-content: center;
   font-size: 0.75rem;
   font-weight: bold;
-}
-
-/* ===== Responsive Design ===== */
-@media (max-width: 992px) {
-  .navbar-nav {
-    gap: 10px;
-  }
-  
-  .nav-link {
-    padding: 8px 12px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-overlay h1 {
-    font-size: 2.2rem;
-  }
-  
-  .hero-overlay p {
-    font-size: 1rem;
-  }
-  
-  .page-banner h1 {
-    font-size: 2rem;
-  }
-  
-  .navbar-nav {
-    flex-direction: column;
-    gap: 5px;
-    padding-top: 1rem;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 1rem;
-  }
-  
-  .floating-cart {
-    width: 45px;
-    height: 45px;
-    top: 15px;
-    right: 15px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-overlay {
-    padding: 20px;
-  }
-  
-  .hero-overlay h1 {
-    font-size: 1.8rem;
-  }
-  
-  .page-banner {
-    padding: 3rem 0;
-  }
-  
-  .card-img-top {
-    height: 160px;
-  }
-  
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .cart-item-image {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
 }
