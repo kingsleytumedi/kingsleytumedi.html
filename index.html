@@ -6,69 +6,107 @@
   <title>Tumedi's Pet Store</title>
   <!-- Bootstrap 5 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Your custom CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Floating Cart Button -->
-  <button class="cart-btn" onclick="window.location.href='cart.html'">
+  <!-- Floating Cart Button (Bootstrap) -->
+  <button 
+    class="btn btn-primary position-fixed top-0 end-0 m-4 rounded-circle cart-btn" 
+    onclick="window.location.href='cart.html'"
+    aria-label="Cart"
+  >
     <i class="fas fa-shopping-cart"></i>
-    <span class="cart-count">0</span>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
   </button>
 
-  <header>
-    <div class="logo">🐾 Tumedi's Pet Store</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="dogs.html">Dogs</a></li>
-        <li><a href="cats.html">Cats</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="cart.html">Cart</a></li>
-      </ul>
-    </nav>
+  <!-- Header with Bootstrap Navbar -->
+  <header class="bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">🐾 Tumedi's Pet Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="dogs.html">Dogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="cats.html">Cats</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero-full">
-    <div class="hero-overlay">
-      <h1>Welcome to Tumedi's Pet Store</h1>
-      <p>Everything you need for your furry friends 🐶🐱</p>
-      <a href="dogs.html" class="btn">Shop for Dogs</a>
-      <a href="cats.html" class="btn">Shop for Cats</a>
+  <!-- Hero Section -->
+  <section class="hero-full d-flex align-items-center">
+    <div class="container text-center text-white hero-overlay p-5 rounded">
+      <h1 class="display-4 fw-bold">Welcome to Tumedi's Pet Store</h1>
+      <p class="lead">Everything you need for your furry friends 🐶🐱</p>
+      <a href="dogs.html" class="btn btn-primary btn-lg mx-2">Shop for Dogs</a>
+      <a href="cats.html" class="btn btn-success btn-lg mx-2">Shop for Cats</a>
     </div>
   </section>
 
-  <section class="featured">
-    <h2>Popular Products</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://i.postimg.cc/zBTRwRWk/dog-food.jpg" alt="Dog Food">
-        <h3>Premium Dog Food</h3>
-        <p>P70.00</p>
-        <button class="add-to-cart">Add to Cart</button>
+  <!-- Featured Products -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Popular Products</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/zBTRwRWk/dog-food.jpg" class="card-img-top" alt="Premium Dog Food">
+          <div class="card-body text-center">
+            <h3 class="card-title">Premium Dog Food</h3>
+            <p class="card-text text-muted">P70.00</p>
+            <button 
+              class="btn btn-primary add-to-cart"
+              data-name="Premium Dog Food" 
+              data-price="70.00"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://i.postimg.cc/MGPskNrL/cat-toy.jpg" alt="Cat Toy">
-        <h3>Interactive Cat Toy</h3>
-        <p>P45.00</p>
-        <button class="add-to-cart">Add to Cart</button>
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/MGPskNrL/cat-toy.jpg" class="card-img-top" alt="Interactive Cat Toy">
+          <div class="card-body text-center">
+            <h3 class="card-title">Interactive Cat Toy</h3>
+            <p class="card-text text-muted">P45.00</p>
+            <button 
+              class="btn btn-primary add-to-cart"
+              data-name="Interactive Cat Toy" 
+              data-price="45.00"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="https://wa.me/74602567" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://facebook.com/Tumedi's petstore" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com/Tumedi's petstore" target="_blank"><i class="fab fa-instagram"></i></a>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/74602567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp mx-2"></i></a>
+        <a href="https://facebook.com/TumedisPetStore" target="_blank" aria-label="Facebook"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://instagram.com/TumedisPetStore" target="_blank" aria-label="Instagram"><i class="fab fa-instagram mx-2"></i></a>
+      </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
