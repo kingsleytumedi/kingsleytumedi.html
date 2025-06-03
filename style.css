@@ -12,13 +12,15 @@
   --text-light: #ffffff;
   --bg-light: #f5f5f5;
   --border-color: #dddddd;
+  --error-color: #ff4d4f;
+  --success-color: #52c41a;
 }
 
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
-  background: var(--text-light);
+  background: var(--bg-light);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +34,7 @@ a {
 /* ===== HEADER STYLES ===== */
 .site-header {
   background: var(--primary-blue);
-  color: black;
+  color: var(--text-light);
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -48,7 +50,7 @@ a {
 .nav-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;
+  color: var(--text-light);
 }
 
 .nav-menu {
@@ -58,36 +60,38 @@ a {
 }
 
 .nav-link {
-  color: black;
+  color: var(--text-light);
   font-weight: 500;
-  padding: 0.5rem 0;
   position: relative;
 }
 
 .nav-link:hover::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 2px;
-  background: black;
+  background: var(--text-light);
 }
 
-/* ===== COMMON PAGE STYLES ===== */
+/* ===== COMMON PAGE STRUCTURE ===== */
 .page-container {
   flex: 1;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  background: var(--text-light);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
 .page-title {
   color: var(--primary-blue);
   margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .page-subtitle {
@@ -95,26 +99,26 @@ a {
   margin-bottom: 2rem;
   text-align: center;
   font-weight: normal;
+  font-size: 1.2rem;
 }
 
 .divider {
-  height: 1px;
+  height: 2px;
   background: var(--border-color);
   margin: 1.5rem auto;
-  width: 80%;
+  width: 90%;
 }
 
-/* ===== HOMEPAGE STYLES ===== */
+/* ===== HOMEPAGE ===== */
 .hero-section {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--primary-blue);
   margin-bottom: 1rem;
-  line-height: 1.3;
 }
 
 .hero-description {
@@ -126,7 +130,6 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -134,11 +137,11 @@ a {
   background: var(--primary-blue);
   color: var(--text-light);
   padding: 0.8rem 2rem;
-  border-radius: 4px;
+  border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
   border: none;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .btn:hover {
@@ -158,7 +161,7 @@ a {
   display: block;
 }
 
-/* ===== PRODUCT PAGES ===== */
+/* ===== PRODUCTS PAGE ===== */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -167,15 +170,17 @@ a {
 }
 
 .product-card {
+  background: var(--bg-light);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   transition: transform 0.3s;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .product-image {
@@ -187,17 +192,17 @@ a {
 }
 
 .product-title {
+  font-size: 1.1rem;
   color: var(--primary-blue);
   margin-bottom: 0.5rem;
 }
 
 .product-price {
   font-weight: bold;
-  margin-bottom: 1rem;
   color: var(--text-dark);
 }
 
-/* ===== CART PAGE STYLES ===== */
+/* ===== CART PAGE ===== */
 .cart-container {
   display: flex;
   flex-direction: column;
@@ -212,10 +217,11 @@ a {
 
 .cart-item {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 8px;
+  background: var(--bg-light);
   align-items: center;
 }
 
@@ -232,45 +238,43 @@ a {
 
 .cart-item-title {
   color: var(--primary-blue);
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .cart-item-price {
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .quantity-controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0.5rem 0;
 }
 
 .quantity-btn {
-  background: var(--bg-light);
-  border: none;
+  background: var(--text-light);
+  border: 1px solid var(--border-color);
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .remove-item {
   background: none;
   border: none;
-  color: #ff4444;
+  color: var(--error-color);
   cursor: pointer;
-  align-self: flex-start;
+  margin-top: 0.5rem;
 }
 
 .cart-summary {
-  background: var(--bg-light);
+  background: var(--text-light);
   padding: 1.5rem;
   border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .summary-row {
@@ -284,17 +288,21 @@ a {
   font-size: 1.1rem;
   border-top: 1px solid var(--border-color);
   padding-top: 0.5rem;
-  margin-top: 0.5rem;
 }
 
 .empty-cart {
   text-align: center;
   padding: 2rem;
+  color: var(--text-dark);
 }
 
-/* ===== ABOUT PAGE STYLES ===== */
+/* ===== ABOUT PAGE ===== */
 .about-section {
   margin-bottom: 2rem;
+  background: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .about-section h2 {
@@ -302,7 +310,7 @@ a {
   margin-bottom: 1rem;
 }
 
-/* ===== FEEDBACK PAGE STYLES ===== */
+/* ===== FEEDBACK PAGE ===== */
 .feedback-form {
   background: var(--text-light);
   padding: 2rem;
@@ -394,36 +402,32 @@ a {
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
 
-/* ===== RESPONSIVE STYLES ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: row;
+    flex-direction: column;
   }
-  
+
   .nav-menu {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
-  .btn-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
+
   .btn {
     width: 100%;
     max-width: 250px;
   }
-  
+
   .cart-item {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .footer-links {
     flex-direction: column;
     gap: 0.5rem;
