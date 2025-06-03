@@ -2,201 +2,435 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dog Products - Tumedi's Pet Store</title>
   <!-- Bootstrap 5 CDN -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">🐾 Tumedi's Pet Store</div>
-   <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="dogs.html">Dogs</a></li>
-    <li><a href="cats.html">Cats</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="feedback.html">Feedback</a></li>
-    <li><a href="cart.html">Cart</a></li>
-  </ul>
-</nav>
+  <!-- Floating Cart Button -->
+  <button class="btn btn-primary position-fixed top-0 end-0 m-4 rounded-circle cart-btn" onclick="window.location.href='cart.html'" aria-label="Cart">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">0</span>
+  </button>
 
+  <!-- Header -->
+  <header class="bg-light">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">🐾 Tumedi's Pet Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="dogs.html">Dogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="cats.html">Cats</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
-  <section class="page-banner dog-banner">
-    <h1>Dog Products</h1>
-    <p>All the best for your canine companion 🐕</p>
+  <!-- Banner -->
+  <section class="dog-banner py-5 bg-primary text-white">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Dog Products</h1>
+      <p class="lead">All the best for your canine companion 🐕</p>
+    </div>
   </section>
 
-  <section class="products">
-    <div class="card">
-      <img src="https://i.postimg.cc/zBTRwRWk/dog-food.jpg" alt="Dog Food">
-      <h3>Premium Dog Food</h3>
-      <p>P70.00</p>
-      <button>Add to Cart</button>
+  <!-- Products Grid -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/zBTRwRWk/dog-food.jpg" class="card-img-top" alt="Premium Dog Food">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Premium Dog Food</h3>
+            <p class="card-text text-muted">P70.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Premium Dog Food" data-price="70.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/MHK5D6fP/Durable-Dog-Leash.jpg" class="card-img-top" alt="Durable Dog Leash">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Durable Dog Leash</h3>
+            <p class="card-text text-muted">P50.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Durable Dog Leash" data-price="50.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/qqRqwSJX/Gentle-Dog-Shampoo.jpg" class="card-img-top" alt="Gentle Dog Shampoo">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Gentle Dog Shampoo</h3>
+            <p class="card-text text-muted">P35.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Gentle Dog Shampoo" data-price="35.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/bw2TLFdh/Delicious-Dog-Treats.jpg" class="card-img-top" alt="Delicious Dog Treats">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Delicious Dog Treats</h3>
+            <p class="card-text text-muted">P25.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Delicious Dog Treats" data-price="25.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/CKG4pBjr/Comfortable-Dog-Bed.jpg" class="card-img-top" alt="Comfortable Dog Bed">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Comfortable Dog Bed</h3>
+            <p class="card-text text-muted">P120.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Comfortable Dog Bed" data-price="120.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/cHTM6pkQ/Interactive-Dog-Toy.jpg" class="card-img-top" alt="Interactive Dog Toy">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Interactive Dog Toy</h3>
+            <p class="card-text text-muted">P40.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Interactive Dog Toy" data-price="40.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/ZKXP9FHD/Stylish-Dog-Collar.jpg" class="card-img-top" alt="Stylish Dog Collar">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Stylish Dog Collar</h3>
+            <p class="card-text text-muted">P30.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Stylish Dog Collar" data-price="30.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/hjCTK9hs/Warm-Dog-Sweater.jpg" class="card-img-top" alt="Warm Dog Sweater">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Warm Dog Sweater</h3>
+            <p class="card-text text-muted">P50.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Warm Dog Sweater" data-price="50.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/QNy1Pk2x/Stainless-Steel-Dog-Bowl.jpg" class="card-img-top" alt="Stainless Steel Dog Bowl">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Stainless Steel Dog Bowl</h3>
+            <p class="card-text text-muted">P20.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Stainless Steel Dog Bowl" data-price="20.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/HxL8vV3y/Comfortable-Dog-Harness.jpg" class="card-img-top" alt="Comfortable Dog Harness">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Comfortable Dog Harness</h3>
+            <p class="card-text text-muted">P60.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Comfortable Dog Harness" data-price="60.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/J0DDmvf7/dog-blanket.jpg" class="card-img-top" alt="Cozy Dog Blanket">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Cozy Dog Blanket</h3>
+            <p class="card-text text-muted">P45.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Cozy Dog Blanket" data-price="45.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/xd6cm9YT/poop-whatwhat.jpg" class="card-img-top" alt="Eco-friendly Poop Bags">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Eco-friendly Poop Bags</h3>
+            <p class="card-text text-muted">P15.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Eco-friendly Poop Bags" data-price="15.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 13 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/fLkkj1T7/travel-dog-carrier.jpg" class="card-img-top" alt="Travel Dog Carrier">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Travel Dog Carrier</h3>
+            <p class="card-text text-muted">P150.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Travel Dog Carrier" data-price="150.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 14 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/7br6461X/Protective-Dog-Booties.jpg" class="card-img-top" alt="Protective Dog Booties">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Protective Dog Booties</h3>
+            <p class="card-text text-muted">P55.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Protective Dog Booties" data-price="55.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 15 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/59TnhFT1/Waterproof-Dog-Raincoat.jpg" class="card-img-top" alt="Waterproof Dog Raincoat">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Waterproof Dog Raincoat</h3>
+            <p class="card-text text-muted">P75.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Waterproof Dog Raincoat" data-price="75.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 16 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/DwK5Z37M/Dog-Grooming-Clippers.jpg" class="card-img-top" alt="Dog Grooming Clippers">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dog Grooming Clippers</h3>
+            <p class="card-text text-muted">P100.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dog Grooming Clippers" data-price="100.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 17 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/8zB4fX5P/dog-tooth-brush.jpg" class="card-img-top" alt="Dog Toothbrush Set">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dog Toothbrush Set</h3>
+            <p class="card-text text-muted">P20.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dog Toothbrush Set" data-price="20.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 18 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/jjxXH6w6/Winter-Dog-Jacket.jpg" class="card-img-top" alt="Winter Dog Jacket">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Winter Dog Jacket</h3>
+            <p class="card-text text-muted">P80.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Winter Dog Jacket" data-price="80.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 19 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/VNKFDSnx/Dog-Sunscreen.jpg" class="card-img-top" alt="Dog Sunscreen">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dog Sunscreen</h3>
+            <p class="card-text text-muted">P45.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dog Sunscreen" data-price="45.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 20 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/v8JtqwxZ/Orthopedic-Dog-Mattress.jpg" class="card-img-top" alt="Orthopedic Dog Mattress">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Orthopedic Dog Mattress</h3>
+            <p class="card-text text-muted">P200.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Orthopedic Dog Mattress" data-price="200.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 21 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/xTLyBpLy/Dental-Chews-for-Dogs.jpg" class="card-img-top" alt="Dental Chews for Dogs">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dental Chews for Dogs</h3>
+            <p class="card-text text-muted">P30.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dental Chews for Dogs" data-price="30.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 22 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/NjY7t84h/Dog-Safe-Chocolate.jpg" class="card-img-top" alt="Dog Safe Chocolate">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dog Safe Chocolate</h3>
+            <p class="card-text text-muted">P40.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dog Safe Chocolate" data-price="40.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 23 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/Jzq3zy6s/Dog-Paw-Cleaner.jpg" class="card-img-top" alt="Dog Paw Cleaner">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Dog Paw Cleaner</h3>
+            <p class="card-text text-muted">P25.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Dog Paw Cleaner" data-price="25.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 24 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/527Hr8KS/Portable-Dog-Umbrella.jpg" class="card-img-top" alt="Portable Dog Umbrella">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Portable Dog Umbrella</h3>
+            <p class="card-text text-muted">P35.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Portable Dog Umbrella" data-price="35.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 25 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/9fD4Hzv5/Luxury-Dog-Stroller.jpg" class="card-img-top" alt="Luxury Dog Stroller">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Luxury Dog Stroller</h3>
+            <p class="card-text text-muted">P350.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Luxury Dog Stroller" data-price="350.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 26 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="https://i.postimg.cc/nLNXFpJs/Interactive-Puzzle-Toy.jpg" class="card-img-top" alt="Interactive Puzzle Toy">
+          <div class="card-body text-center">
+            <h3 class="card-title h5">Interactive Puzzle Toy</h3>
+            <p class="card-text text-muted">P40.00</p>
+            <button class="btn btn-primary add-to-cart" data-name="Interactive Puzzle Toy" data-price="40.00">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/MHK5D6fP/Durable-Dog-Leash.jpg" alt="Dog Leash">
-      <h3>Durable Dog Leash</h3>
-      <p>P50.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/qqRqwSJX/Gentle-Dog-Shampoo.jpg" alt="Dog Shampoo">
-      <h3>Gentle Dog Shampoo</h3>
-      <p>P35.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/bw2TLFdh/Delicious-Dog-Treats.jpg" alt="Dog Treats">
-      <h3>Delicious Dog Treats</h3>
-      <p>P25.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/CKG4pBjr/Comfortable-Dog-Bed.jpg" alt="Dog Bed">
-      <h3>Comfortable Dog Bed</h3>
-      <p>P120.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/cHTM6pkQ/Interactive-Dog-Toy.jpg" alt="Dog Toy">
-      <h3>Interactive Dog Toy</h3>
-      <p>P40.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/ZKXP9FHD/Stylish-Dog-Collar.jpg" alt="Dog Collar">
-      <h3>Stylish Dog Collar</h3>
-      <p>P30.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/hjCTK9hs/Warm-Dog-Sweater.jpg" alt="Dog Sweater">
-      <h3>Warm Dog Sweater</h3>
-      <p>P50.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/QNy1Pk2x/Stainless-Steel-Dog-Bowl.jpg" alt="Dog Bowl">
-      <h3>Stainless Steel Dog Bowl</h3>
-      <p>P20.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/HxL8vV3y/Comfortable-Dog-Harness.jpg" alt="Dog Harness">
-      <h3>Comfortable Dog Harness</h3>
-      <p>P60.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/J0DDmvf7/dog-blanket.jpg" alt="Dog Blanket">
-      <h3>Cozy Dog Blanket</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/xd6cm9YT/poop-whatwhat.jpg" alt="Poop Bags">
-      <h3>Eco-friendly Poop Bags</h3>
-      <p>P15.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/fLkkj1T7/travel-dog-carrier.jpg" alt="Dog Carrier">
-      <h3>Travel Dog Carrier</h3>
-      <p>P150.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/7br6461X/Protective-Dog-Booties.jpg" alt="Dog Booties">
-      <h3>Protective Dog Booties</h3>
-      <p>P55.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/59TnhFT1/Waterproof-Dog-Raincoat.jpg" alt="Dog Raincoat">
-      <h3>Waterproof Dog Raincoat</h3>
-      <p>P75.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/DwK5Z37M/Dog-Grooming-Clippers.jpg" alt="Dog Clippers">
-      <h3>Dog Grooming Clippers</h3>
-      <p>P100.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/8zB4fX5P/dog-tooth-brush.jpg" alt="Dog Toothbrush">
-      <h3>Dog Toothbrush Set</h3>
-      <p>P20.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/jjxXH6w6/Winter-Dog-Jacket.jpg" alt="Dog Jacket">
-      <h3>Winter Dog Jacket</h3>
-      <p>P80.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/VNKFDSnx/Dog-Sunscreen.jpg" alt="Dog Sunscreen">
-      <h3>Dog Sunscreen</h3>
-      <p>P45.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/v8JtqwxZ/Orthopedic-Dog-Mattress.jpg" alt="Dog Mattress">
-      <h3>Orthopedic Dog Mattress</h3>
-      <p>P200.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/xTLyBpLy/Dental-Chews-for-Dogs.jpg" alt="Dental Chews">
-      <h3>Dental Chews for Dogs</h3>
-      <p>P30.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/NjY7t84h/Dog-Safe-Chocolate.jpg" alt="Dog Chocolate">
-      <h3>Dog Safe Chocolate</h3>
-      <p>P40.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/Jzq3zy6s/Dog-Paw-Cleaner.jpg" alt="Paw Cleaner">
-      <h3>Dog Paw Cleaner</h3>
-      <p>P25.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/527Hr8KS/Portable-Dog-Umbrella.jpg" alt="Dog Umbrella">
-      <h3>Portable Dog Umbrella</h3>
-      <p>P35.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/9fD4Hzv5/Luxury-Dog-Stroller.jpg" alt="Dog Stroller">
-      <h3>Luxury Dog Stroller</h3>
-      <p>P350.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/nLNXFpJs/Interactive-Puzzle-Toy.jpg" alt="Puzzle Toy">
-      <h3>Interactive Puzzle Toy</h3>
-      <p>P40.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.postimg.cc/3NFNFGDp/Dog-Travel-Bag.jpg" alt="Travel Bag">
-      <h3>Dog Travel Bag</h3>
-      <p>P80.00</p>
-      <button>Add to Cart</button>
-    </div>
-    <!-- You can continue adding more products by following the same structure -->
   </section>
 
-  <footer>
-    <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Tumedi's Pet Store. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/74602567" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp mx-2"></i></a>
+        <a href="https://facebook.com/TumedisPetStore" target="_blank" aria-label="Facebook"><i class="fab fa-facebook mx-2"></i></a>
+        <a href="https://instagram.com/TumedisPetStore" target="_blank" aria-label="Instagram"><i class="fab fa-instagram mx-2"></i></a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
