@@ -1,4 +1,3 @@
-// cart.js - Tumedi's Pet Store Cart Functionality
 document.addEventListener('DOMContentLoaded', function() {
     // DOM Elements
     const cartItemsContainer = document.getElementById('cart-items');
@@ -8,14 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartTotal = document.getElementById('cart-total');
     const checkoutBtn = document.getElementById('checkout-btn');
 
-    // Cart data structure
+    // Cart data (loaded from localStorage)
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Initialize the cart display
+    // Initialize everything
     function initCart() {
         renderCartItems();
         updateCartSummary();
         toggleEmptyCartMessage();
+        updateCartCount(); // Added this line
     }
 
     // Render all cart items
@@ -48,14 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <button class="remove-item"><i class="fas fa-trash"></i></button>
         `;
 
-        // Add event listeners to the buttons
-        const minusBtn = cartItem.querySelector('.minus');
-        const plusBtn = cartItem.querySelector('.plus');
-        const removeBtn = cartItem.querySelector('.remove-item');
-
-        minusBtn.addEventListener('click', () => updateQuantity(index, -1));
-        plusBtn.addEventListener('click', () => updateQuantity(index, 1));
-        removeBtn.addEventListener('click', () => removeItem(index));
+        // Event listeners
+        cartItem.querySelector('.minus').addEventListener('click', () => updateQuantity(index, -1));
+        cartItem.querySelector('.plus').addEventListener('click', () => updateQuantity(index, 1));
+        cartItem.querySelector('.remove-item').addEventListener('click', () => removeItem(index));
 
         return cartItem;
     }
@@ -71,86 +67,67 @@ document.addEventListener('DOMContentLoaded', function() {
         
         cart[index].quantity = newQuantity;
         saveCart();
-        renderCartItems();
-        updateCartSummary();
+        updateCartCount(); // Added this line
     }
 
     // Remove item from cart
     function removeItem(index) {
         cart.splice(index, 1);
         saveCart();
+        updateCartCount(); // Added this line
+    }
+
+    // Update cart summary
+    function updateCartSummary() {
+        const subtotal = calculateSubtotal();
+        const shipping = 100; // Fixed shipping
+        const total = subtotal + shipping;
+
+        cartSubtotal.textContent = `P${subtotal.toFixed(2)}`;
+        cartTotal.textContent = `P${total.toFixed(2)}`;
+        cartSummary.style.display = cart.length > 0 ? 'block' : 'none';
+    }
+
+    // Helper functions
+    function calculateSubtotal() {
+        return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    }
+
+    function toggleEmptyCartMessage() {
+        emptyCartMessage.style.display = cart.length === 0 ? 'flex' : 'none';
+    }
+
+    function saveCart() {
+        localStorage.setItem('cart', JSON.stringify(cart));
         renderCartItems();
         updateCartSummary();
         toggleEmptyCartMessage();
     }
 
-    // Update cart summary (subtotal, total, etc.)
-    function updateCartSummary() {
-        const subtotal = calculateSubtotal();
-        const shipping = 100; // Fixed shipping cost
-        const total = subtotal + shipping;
-
-        cartSubtotal.textContent = `P${subtotal.toFixed(2)}`;
-        cartTotal.textContent = `P${total.toFixed(2)}`;
-
-        // Show/hide summary based on cart content
-        if (cart.length > 0) {
-            cartSummary.style.display = 'block';
-        } else {
-            cartSummary.style.display = 'none';
-        }
-    }
-
-    // Calculate subtotal
-    function calculateSubtotal() {
-        return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    }
-
-    // Toggle empty cart message
-    function toggleEmptyCartMessage() {
-        if (cart.length === 0) {
-            emptyCartMessage.style.display = 'flex';
-        } else {
-            emptyCartMessage.style.display = 'none';
-        }
-    }
-
-    // Save cart to localStorage
-    function saveCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-
-    // Checkout button handler
+    // Checkout handler
     checkoutBtn.addEventListener('click', function() {
         if (cart.length === 0) {
             alert('Your cart is empty!');
             return;
         }
         
-        // In a real implementation, this would redirect to a checkout page
-        alert(`Order confirmed! Total: P${calculateSubtotal().toFixed(2)}`);
-        
-        // Clear the cart after checkout
+        alert(`Order confirmed! Total: P${(calculateSubtotal() + 100).toFixed(2)}`);
         cart = [];
         saveCart();
-        renderCartItems();
-        updateCartSummary();
-        toggleEmptyCartMessage();
     });
 
-    // Initialize the cart when page loads
     initCart();
 });
 
-// Function to add items to cart (to be called from product pages)
+// External function to add items (called from product pages)
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Check if product already exists in cart
-    const existingItem = cart.find(item => item.id === product.id);
+    // Check if product exists
+    const existingItemIndex = cart.findIndex(item => item.id === product.id);
     
-    if (existingItem) {
-        existingItem.quantity += 1;
+    if (existingItemIndex >= 0) {
+        cart[existingItemIndex].quantity += 1;
     } else {
         cart.push({
             id: product.id,
@@ -162,20 +139,16 @@ function addToCart(product) {
     }
     
     localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // Show confirmation
-    alert(`${product.name} added to cart!`);
-    
-    // Update cart count in header (if you implement it)
     updateCartCount();
+    alert(`${product.name} added to cart!`);
 }
 
-// Function to update cart count in header
+// Update cart count in header/navbar
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartCountElements = document.querySelectorAll('.cart-count');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     
-    cartCountElements.forEach(element => {
-        element.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.querySelectorAll('.cart-count').forEach(el => {
+        el.textContent = totalItems;
     });
 }
